@@ -2,13 +2,13 @@
 #include <dlfcn.h>
 #include "libfoo/foo.h"
 
-static PyObject* py_buzz(PyObject* self, PyObject* args) {
-    buzz();
+static PyObject* py_bar(PyObject* self, PyObject* args) {
+    bar();
     Py_RETURN_NONE;
 }
 
 static PyMethodDef Methods[] = {
-    {"buzz", py_buzz, METH_VARARGS, "Call buzz from libfoo"},
+    {"bar", py_bar, METH_VARARGS, "Call bar from libfoo"},
     {NULL, NULL, 0, NULL}
 };
 
